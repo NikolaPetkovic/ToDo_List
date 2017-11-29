@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #1a1a1a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowTaskController">
+   <children>
+      <GridPane prefHeight="315.0" prefWidth="500.0" style="-fx-background-color: #1a1a1a;" vgap="2.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="164.0" prefWidth="164.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.0" minWidth="66.0" prefWidth="66.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="27.0" minHeight="27.0" prefHeight="27.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="498.0" text="" textFill="WHITE" GridPane.columnSpan="2147483647">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font></Label>
+            <Label text="Name : " textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font></Label>
+            <Label text="Deadline :" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font></Label>
+            <Label text="Priority :" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font></Label>
+            <TextField fx:id="tfName" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+            <Label text="Tags :" textFill="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" onAction="#cancelTask" prefWidth="66.0" style="-fx-background-color: #F0EB26;" text="Back" GridPane.columnIndex="3" GridPane.rowIndex="12">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label text="Creation date :" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Completion date:" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCreationDate" prefHeight="25.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+            <TextField fx:id="tfDeadlineDate" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+            <TextField fx:id="tfDoneDate" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+            <TextField fx:id="tfPrio" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="tfTag0" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="tfTag1" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="tfTag2" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="tfTag3" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

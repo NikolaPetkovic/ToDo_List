@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="740.0" style="-fx-background-color: #282727;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ArchiveViewController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="680.0" minWidth="680.0" prefWidth="680.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="300.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="450.0" minHeight="450.0" prefHeight="450.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane maxHeight="100.0" maxWidth="740.0" minHeight="100.0" minWidth="740.0" prefHeight="100.0" prefWidth="740.0" style="-fx-background-color: #282727;" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ScrollPane fx:id="tagScrollPane" maxHeight="75.0" maxWidth="743.0" minHeight="75.0" minWidth="680.0" prefHeight="75.0" prefWidth="743.0" style="-fx-background-color: #282727; -fx-background: #282727;" vbarPolicy="NEVER" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="15.0" right="5.0" top="5.0" />
+               </padding>
+            </ScrollPane>
+            <Button fx:id="backBtn" alignment="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="28.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100000; -fx-border-width: 2; -fx-background-radius: 100000;" text="B" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <ScrollPane fx:id="taskScrollPane" maxHeight="450.0" maxWidth="680.0" minHeight="450.0" minWidth="680.0" prefHeight="450.0" prefWidth="680.0" style="-fx-background-color: #1a1a1a; -fx-background: #1a1a1a;" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="5.0" top="15.0" />
+         </padding>
+      </ScrollPane>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="60.0" prefHeight="450.0" prefWidth="60.0" style="-fx-background-color: #333333;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="refreshBtn" alignment="CENTER" mnemonicParsing="false" onAction="#refresh" prefHeight="32.0" prefWidth="28.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100000; -fx-border-width: 2; -fx-background-radius: 100000;" text="R" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="sortBtn" alignment="CENTER" mnemonicParsing="false" onAction="#sort" prefHeight="32.0" prefWidth="28.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100000; -fx-border-width: 2; -fx-background-radius: 100000;" text="S" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </VBox>
+      <GridPane prefHeight="25.0" prefWidth="740.0" style="-fx-background-color: black;" stylesheets="@../css/DarkTheme.css" GridPane.columnSpan="2">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="695.0" style="-: ;" stylesheets="@../css/DarkTheme.css">
+               <children>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" styleClass="menuBtn" text="Refresh" textAlignment="CENTER" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#sort" prefHeight="25.0" styleClass="menuBtn" text="Sort" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openPrintTaskUI" prefHeight="25.0" styleClass="menuBtn" text="Print Task" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="25.0" styleClass="menuBtn" text="Back" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</GridPane>

@@ -1,0 +1,101 @@
+.menuBtn {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-background-color: black;
+    -fx-padding: 1px 5px 1px 5px;
+    -fx-text-fill: white;
+}
+
+.menuBtn:hover {
+    -fx-border-color: #F0EB26;
+    -fx-background-color: #F0EB26;
+    -fx-text-fill: black;
+}
+
+.btn {
+    -fx-background-color: #F0EB26;
+}
+
+.btnRE {
+    -fx-background-color: #F0EB26;
+    -fx-background-insets: -1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.btnRE:pressed {
+    -fx-background-insets: 0;
+}
+
+/* day Field */
+
+.dayField .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-radius: 0;
+}
+
+.dayField .scroll-bar:vertical .track {
+    -fx-background-color:  #1a1a1a;
+    -fx-background-insets: 0;
+}
+
+.dayField .scroll-bar:vertical .increment-button,
+.dayField .scroll-bar:vertical .decrement-button {
+    -fx-background-color:  #1a1a1a;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+
+.dayField .scroll-bar:vertical .increment-button .increment-arrow,
+.dayField .scroll-bar:vertical .decrement-button .decrement-arrow {
+    -fx-background-color:  #1a1a1a;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: #1a1a1a;
+}
+
+/* tag Field */
+
+.tagField .scroll-bar:horizontal .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-radius: 0;
+}
+
+.tagField .scroll-bar:horizontal .track {
+    -fx-background-color: #282727;
+    -fx-background-insets: 0;
+}
+
+.tagField .scroll-bar:horizontal .increment-button,
+.tagField .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:  #282727;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+
+.tagField .scroll-bar:horizontal .increment-button .increment-arrow,
+.tagField .scroll-bar:horizontal .decrement-button .decrement-arrow {
+     -fx-background-color:  #282727;
+     -fx-border-width: 0;
+     -fx-background-insets: 0;
+     -fx-border-color: #1a1a1a;
+}
+
+.tagField,
+.dayField {
+    -fx-background-insets: 0;
+}
+
+.tagField:focused,
+.dayField:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.tagField .corner,
+.dayField .corner {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}

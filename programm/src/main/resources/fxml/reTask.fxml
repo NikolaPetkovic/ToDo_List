@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="gridPane" maxHeight="35.0" maxWidth="135.0" minHeight="35.0" minWidth="135.0" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #333333;" stylesheets="@../css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReTaskController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="57.0" minWidth="57.0" prefWidth="57.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="43.0" minWidth="43.0" prefWidth="43.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="13.0" minHeight="13.0" prefHeight="13.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="22.0" minHeight="22.0" prefHeight="22.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="timeLabel" text="time" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" text="Name" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editPressed" prefHeight="20.0" prefWidth="18.0" styleClass="btnRE" text="E" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="SOMETIMES">
+               <font>
+                  <Font name="Calibri" size="9.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#donePressed" prefHeight="20.0" prefWidth="18.0" styleClass="btnRE" text="D" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="SOMETIMES">
+               <font>
+                  <Font name="Calibri" size="9.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox fx:id="hBox" maxHeight="13.0" maxWidth="135.0" minHeight="13.0" minWidth="135.0" prefHeight="13.0" prefWidth="135.0" style="-fx-background-insets: 0;" GridPane.columnSpan="2" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER" />
+   </children>
+</GridPane>

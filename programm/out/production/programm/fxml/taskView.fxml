@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="665.0" maxWidth="750.0" minHeight="665.0" minWidth="750.0" prefHeight="665.0" prefWidth="750.0" stylesheets="@../css/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TaskViewController">
+   <children>
+      <GridPane layoutY="0.0" maxHeight="25.0" maxWidth="750.0" minHeight="25.0" minWidth="750.0" prefHeight="25.0" prefWidth="750.0" style="-fx-background-color: black;" stylesheets="@../css/DarkTheme.css">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="695.0" minWidth="695.0" prefWidth="695.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="45.0" prefWidth="45.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox maxHeight="25.0" maxWidth="695.0" minHeight="25.0" minWidth="695.0" prefHeight="25.0" prefWidth="695.0" style="-: ;" stylesheets="@../css/DarkTheme.css">
+               <children>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" styleClass="menuBtn" text="Refresh" textAlignment="CENTER" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#sort" prefHeight="25.0" styleClass="menuBtn" text="Sort" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openTagCreationUI" prefHeight="25.0" styleClass="menuBtn" text="Add Tag" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openTaskCreationUI" prefHeight="25.0" styleClass="menuBtn" text="Add Task" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openReTaskCreationUI" prefHeight="25.0" styleClass="menuBtn" text="Add ReTask" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openPrintTaskUI" prefHeight="25.0" styleClass="menuBtn" text="PrintTask" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openPrintReTaskUI" prefHeight="25.0" styleClass="menuBtn" text="PrintReTask" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="25.0" styleClass="menuBtn" text="Back" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <BorderPane layoutY="25.0" maxHeight="640.0" maxWidth="750.0" minHeight="640.0" minWidth="750.0" prefHeight="640.0" prefWidth="750.0">
+         <bottom>
+            <GridPane hgap="3.0" maxHeight="210.0" maxWidth="750.0" minHeight="210.0" minWidth="750.0" prefHeight="210.0" prefWidth="750.0" style="-fx-background-color: #1a1a1a;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="mondayPane" hbarPolicy="NEVER" maxHeight="140.0" minHeight="140.0" minWidth="145.0" prefHeight="140.0" prefWidth="145.0" style="-fx-background: #1a1a1a; -fx-background-color: #1a1a1a;" styleClass="dayField" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES" />
+                  <ScrollPane fx:id="fridayPane" hbarPolicy="NEVER" maxHeight="140.0" minHeight="140.0" minWidth="145.0" prefHeight="140.0" prefWidth="145.0" style="-fx-background: #1a1a1a; -fx-background-color: #1a1a1a;" styleClass="dayField" GridPane.columnIndex="4" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES" />
+                  <ScrollPane fx:id="wednesdayPane" hbarPolicy="NEVER" maxHeight="140.0" minHeight="140.0" minWidth="145.0" prefHeight="140.0" prefWidth="145.0" style="-fx-background: #1a1a1a; -fx-background-color: #1a1a1a;" styleClass="dayField" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES" />
+                  <ScrollPane fx:id="thursdayPane" hbarPolicy="NEVER" maxHeight="140.0" minHeight="140.0" minWidth="145.0" prefHeight="140.0" prefWidth="145.0" style="-fx-background: #1a1a1a; -fx-background-color: #1a1a1a;" styleClass="dayField" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES" />
+                  <ScrollPane fx:id="tuesdayPane" hbarPolicy="NEVER" maxHeight="140.0" minHeight="140.0" minWidth="145.0" prefHeight="140.0" prefWidth="145.0" style="-fx-background: #1a1a1a; -fx-background-color: #1a1a1a;" styleClass="dayField" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES" />
+                  <Label text="Monday" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tuesday" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Wednesday" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Thursday" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Friday" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox maxHeight="35.0" minHeight="35.0" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnSpan="2147483647">
+                     <children>
+                        <Button fx:id="previousWeekBtn" mnemonicParsing="false" onAction="#prevWeek" prefHeight="20.0" prefWidth="40.0" style="-fx-background-color: #F0EB26;" styleClass="btnRE" text="←" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="202.0" right="30.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="weekDateLbl" prefHeight="26.0" text="dd.mm.yy - dd.mm.yy" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="nextWeekBtn" mnemonicParsing="false" onAction="#nextWeek" prefHeight="20.0" prefWidth="40.0" style="-fx-background-color: F0EB26;" styleClass="btnRE" text="→">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="135.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="135.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="135.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="135.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="135.0" />
+               </columnConstraints>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <rowConstraints>
+                  <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </bottom>
+         <right>
+            <VBox alignment="CENTER" maxHeight="350.0" maxWidth="70.0" minHeight="350.0" minWidth="70.0" prefHeight="350.0" prefWidth="70.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="newTaskBtn" alignment="CENTER" mnemonicParsing="false" onAction="#openTaskCreationUI" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100000; -fx-border-width: 2; -fx-background-radius: 100000;" text="+" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="newReTaskBtn" alignment="CENTER" mnemonicParsing="false" onAction="#openReTaskCreationUI" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100000; -fx-border-width: 2; -fx-background-radius: 100000;" text="+" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+         </right>
+         <top>
+            <GridPane maxHeight="80.0" maxWidth="750.0" minHeight="80.0" minWidth="750.0" prefHeight="80.0" prefWidth="750.0" style="-fx-background-color: #282727;" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="680.0" minWidth="680.0" prefWidth="680.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                  <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="newTagBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openTagCreationUI" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100; -fx-border-width: 2; -fx-background-radius: 100;" text="+" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <ScrollPane fx:id="tagScrollPane" maxHeight="80.0" maxWidth="680.0" minHeight="80.0" minWidth="680.0" prefHeight="80.0" prefWidth="680.0" style="-fx-background-color: #282727; -fx-background: #282727;" styleClass="tagField" vbarPolicy="NEVER" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </GridPane>
+         </top>
+         <left>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="680.0" style="-fx-background-color: #1a1a1a;">
+               <children>
+                  <Label fx:id="sortLabel" alignment="CENTER_RIGHT" maxHeight="15.0" maxWidth="680.0" minHeight="15.0" minWidth="680.0" prefHeight="15.0" prefWidth="680.0" text="Label" textAlignment="RIGHT" textFill="#d7d7d7">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </Label>
+                  <ScrollPane fx:id="taskScrollPane" hbarPolicy="NEVER" maxHeight="335.0" maxWidth="680.0" minHeight="335.0" minWidth="680.0" prefHeight="335.0" prefWidth="680.0" style="-fx-background-color: #1a1a1a; -fx-background: #1a1a1a;" styleClass="dayField" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
