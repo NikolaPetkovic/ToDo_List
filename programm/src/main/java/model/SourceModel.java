@@ -181,7 +181,7 @@ public class SourceModel {
     }
     public void saveTags(){
         try {
-            rwa.writeTagsToArchive(tagList);
+            rwa.writeTagsToFile(tagList);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -299,11 +299,111 @@ public class SourceModel {
             }
         }
     }
+    public void sortArchTasks(){
+        try {
+            taskList = rwa.readTasksFromFile();
+            if (!rwa.getFileNameFromFile("Sort1").equals(null) && !rwa.getFileNameFromFile("Sort2").equals(null) && !rwa.getFileNameFromFile("Sort1").equals("-") && !rwa.getFileNameFromFile("Sort1").equals("")){
+                String select1 = rwa.getFileNameFromFile("Sort1");
+                String select2 = rwa.getFileNameFromFile("Sort2");
+                ArrayList<Task> unSortTasks = getTaskArchList();
+                ArrayList<Task> sortTasks = new ArrayList<>();
+
+                if (select1.equals("Priority")) {
+                    if (!select2.equals("-") && !select2.equals("")){
+                        if (select2.equals("Deadline")) {
+                            for (int i = 0; i < 3; i++) {
+                                sortTasks.addAll(sortTaskWithComp(sortTaskWithPriority(unSortTasks,i+1), false).get(0));
+                            }
+                            taskList = sortTasks;
+                        } else if (select2.equals("Tags")){
+                            for (int i = 0; i < 3; i++) {
+                                sortTasks.addAll(sortTaskWithTag(sortTaskWithPriority(unSortTasks,i+1), false).get(0));
+                            }
+                            taskList = sortTasks;
+                        }
+                    } else {
+                        taskList = sortTaskWithPriority(unSortTasks,0);
+                    }
+                } else if (select1.equals("Deadline")) {
+                    if (!select2.equals("-") && !select2.equals("")){
+                        if (select2.equals("Priority")) {
+                            ArrayList<ArrayList<Task>> test = sortTaskWithComp(unSortTasks, true);
+                            for (ArrayList<Task> day : test) {
+                                sortTasks.addAll(sortTaskWithPriority(day, 0));
+                            }
+                            taskList = sortTasks;
+                        } else if (select2.equals("Tags")){
+                            for (ArrayList<Task> day : sortTaskWithComp(unSortTasks, true)) {
+                                sortTasks.addAll(sortTaskWithTag(day, false).get(0));
+                            }
+                            taskList = sortTasks;
+                        }
+                    } else {
+                        taskList = sortTaskWithComp(unSortTasks, false).get(0);
+                    }
+                } else if (select1.equals("Tags")) {
+                    if (!select2.equals("-") && !select2.equals("")){
+                        if (select2.equals("Priority")) {
+                            for (ArrayList<Task> list : sortTaskWithTag(unSortTasks, true)) {
+                                sortTasks.addAll(sortTaskWithPriority(list, 0));
+                            }
+                            taskList = sortTasks;
+                        } else if (select2.equals("Deadline")){
+                            for (ArrayList<Task> list : sortTaskWithTag(unSortTasks, true)) {
+                                sortTasks.addAll(sortTaskWithComp(list, false).get(0));
+                            }
+                            taskList = sortTasks;
+                        }
+                    } else {
+                        taskList = sortTaskWithTag(unSortTasks, false).get(0);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     private boolean dateBefore (Task one, Task two){
         Date deadline1 = one.getDeadline();
         Date deadline2 = two.getDeadline();
+
+        if (deadline1.getYear() < deadline2.getYear()) {
+            return true;
+        }else if (deadline1.getYear() == deadline2.getYear()){
+            if (deadline1.getMonth() < deadline2.getMonth()){
+                return true;
+            }else if (deadline1.getMonth() == deadline2.getMonth()){
+                if(deadline1.getDay() < deadline2.getDay()){
+                    return true;
+                }else if (deadline1.getDay() == deadline2.getDay()){
+                    if (deadline1.getHour() < deadline2.getHour()){
+                        return true;
+                    }else if (deadline1.getHour() == deadline2.getHour()){
+                        if (deadline1.getMinute() < deadline2.getMinute()){
+                            return true;
+                        }else if (deadline1.getMinute() == deadline2.getMinute()){
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    private boolean dateBeforeComp (Task one, Task two){
+        Date deadline1 = one.getCompletionDate();
+        Date deadline2 = two.getCompletionDate();
 
         if (deadline1.getYear() < deadline2.getYear()) {
             return true;
@@ -501,7 +601,101 @@ public class SourceModel {
 
         return sortTaskForDays;
     }
+    private ArrayList<ArrayList<Task>> sortTaskWithComp (ArrayList<Task> unSortTasks, Boolean sameDay){
+        ArrayList<ArrayList<Task>> sortTaskForDays = new ArrayList<>();
+        ArrayList<Task> sortTasks = new ArrayList<>();
 
+        int counter = 0;
+        for (Task unSortTask : unSortTasks) {
+            if (sortTasks.size() == 0){
+                sortTasks.add(unSortTask);
+            } else {
+                counter = 0;
+                for (int i = 0; i <= sortTasks.size(); i++) {
+                    if (sortTasks.size() == i){
+                        sortTasks.add(unSortTask);
+                        i++;
+                    } else if (dateBeforeComp(unSortTask, sortTasks.get(i))){
+                        Task temp = sortTasks.get(i);
+                        sortTasks.set(i,unSortTask);
+                        int j = i+1;
+                        counter++;
+                        while(j <= sortTasks.size()){
+                            if (sortTasks.size() == j){
+                                sortTasks.add(temp);
+                                j++;
+                                counter++;
+                            } else if (dateBeforeComp(temp, sortTasks.get(j))){
+                                Task temp2 = sortTasks.get(j);
+                                sortTasks.set(j,temp);
+                                temp = temp2;
+                            }
+
+                            counter++;
+                            j++;
+                        }
+
+                        i+= counter;
+                    }
+                }
+            }
+        }
+
+        if(sameDay){
+            int i = 0;
+            counter = 0;
+
+            while (i < sortTasks.size()){
+                ArrayList<Task> day = new ArrayList<>();
+                day.add(sortTasks.get(i));
+
+                for (int j = i+1; j < sortTasks.size(); j++) {
+                    if (sameDay(sortTasks.get(i), sortTasks.get(j))){
+                        day.add(sortTasks.get(j));
+                        counter++;
+                    }
+                }
+
+                if (counter != 0) i += counter;
+
+                i++;
+                counter = 0;
+                sortTaskForDays.add(day);
+            }
+        } else {
+            sortTaskForDays.add(sortTasks);
+        }
+
+        return sortTaskForDays;
+    }
+
+    public void archReTask(ReTask reTask, Date date){
+        Task task = new Task(reTask.getName(), date, null, reTask.getCreationDate(), 0, false, reTask.getTagList());
+        if (!archContainsTask(task)){
+            Task archTask = task;
+            archTask.setCompletionDate(new Date(LocalTime.now().getMinute(), LocalTime.now().getHour(), LocalDate.now().getDayOfMonth(), LocalDate.now().getMonthValue(), LocalDate.now().getYear(), false));
+            archTask.setDone(true);
+            taskArchList.add(archTask);
+            System.out.println(archTask.toString());
+            for (Integer integer : archTask.gettagIdList()) {
+                if (integer != 0){
+                    for (Tag tag : tagList) {
+                        if (tag.getId() == integer){
+                            archTag(tag);
+                        }
+                    }
+                }
+            }
+        }
+
+        try {
+            rwa.writeTasksToArchive(taskArchList);
+            rwa.writeTagsToArchive(tagArchList);
+            rwa.writeTasksToFile(taskList);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void archTask(Task task){
         if (!archContainsTask(task)){
             Task archTask = task;

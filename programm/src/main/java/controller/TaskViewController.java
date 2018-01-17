@@ -34,6 +34,8 @@ import java.util.ResourceBundle;
 public class TaskViewController extends Stage  implements Initializable{
     @FXML
     private ScrollPane mondayPane, tuesdayPane, wednesdayPane, thursdayPane, fridayPane;
+    @FXML
+    private VBox root, taskControllerPane;
 
     @FXML
     private Label weekDateLbl, sortLabel;
@@ -199,6 +201,10 @@ public class TaskViewController extends Stage  implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         week = Date.getCurrentWorkweek();
         weekDateLbl.setText(week);
+
+        taskControllerPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            setTasks();
+        });
     }
 
     public void setModel(SourceModel sourceModel) {
@@ -206,6 +212,10 @@ public class TaskViewController extends Stage  implements Initializable{
     }
 
     private void setTasks(){
+        double width = taskControllerPane.getWidth();
+        width = width - 20;
+        int max = (int) (width/110);
+
         GridPane paneForScrollPane = new GridPane();
 
         int y = 0;
@@ -225,7 +235,7 @@ public class TaskViewController extends Stage  implements Initializable{
             taskController.showTags();
             taskController.setTVC(this);
 
-            if (x == 6){
+            if (x == max){
                 y++;
                 x = 0;
             }

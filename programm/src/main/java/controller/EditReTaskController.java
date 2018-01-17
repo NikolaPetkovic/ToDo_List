@@ -356,7 +356,7 @@ public class EditReTaskController extends Stage implements Initializable {
     }
     private String validateName(){
         String name;
-        if(nameTextField.getText().length() >=4 && nameTextField.getText().length() < 24){
+        if(nameTextField.getText().length() >=4 && nameTextField.getText().length() < 40){
             name = nameTextField.getText();
             name.replace(";","");
             //nameTextField.setStyle("-fx-border-color:green; -fx-border-width:2; -fx-border-radius:2;");

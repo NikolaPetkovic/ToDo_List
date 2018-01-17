@@ -254,7 +254,6 @@ public class SourceViewController extends Stage implements Initializable {
     }
 
     public SourceViewController() {
-        this.setTitle("Select File");
         warnings = new ArrayList<>();
         dir1Last = "";
         dir2Last = "";

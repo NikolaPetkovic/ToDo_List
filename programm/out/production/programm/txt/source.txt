@@ -1,11 +1,11 @@
-no
+yes
+C:/Users/588432/Desktop/WoBe/test/tasks.txt
+C:/Users/588432/Desktop/WoBe/test/tags.txt
+C:/Users/588432/Desktop/WoBe/test/reTasks.txt
+C:/Users/588432/Desktop/WoBe/test/dates.txt
+C:/Users/588432/Desktop/WoBe/test/archTasks.txt
+C:/Users/588432/Desktop/WoBe/test/archTags.txt
+C:\Users\588432\Desktop\WoBe\test
+C:\Users\588432\Desktop\WoBe\test
 
 
-
-
-
-
-
-
-Deadline
--

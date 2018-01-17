@@ -6,9 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="1300.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="500.0" style="-fx-background-color: #1a1a1a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SourceViewController">
+<GridPane maxHeight="930.0" maxWidth="1500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="500.0" style="-fx-background-color: #1a1a1a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SourceViewController">
     <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="25.0" prefWidth="25.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="25.0" prefWidth="25.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="125.0" prefWidth="125.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="25.0" prefWidth="25.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
@@ -18,13 +18,13 @@
       <ColumnConstraints />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints maxHeight="200.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="150.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="100.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="225.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="100.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="75.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="90.0" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="75.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
     </rowConstraints>
    <children>
        <Label prefHeight="33.0" prefWidth="152.0" text="Storage location :" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
@@ -68,7 +68,7 @@
                <Font name="Calibri" size="12.0" />
            </font>
        </Label>
-       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="624.0" style="-fx-background-color: black;" text="Choose Folders" textAlignment="CENTER" textFill="WHITE" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+       <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="150.0" maxWidth="1500.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: black;" text="Choose Folders" textAlignment="CENTER" textFill="WHITE" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
            <font>
                <Font name="Calibri Bold" size="20.0" />
            </font>

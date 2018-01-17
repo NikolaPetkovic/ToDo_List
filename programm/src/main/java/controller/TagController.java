@@ -56,17 +56,20 @@ public class TagController extends Stage implements Initializable {
         if (etController.isSave()) {
             if (etController.isChangeSave()){
                 Tag newTag = etController.getTag();
-                tagbtn.setText(newTag.getName());
-                colorPane.setStyle("-fx-background-color: " + newTag.getColor());
+                /*tagbtn.setText(newTag.getName());
+                colorPane.setStyle("-fx-background-color: " + newTag.getColor());*/
+
                 sourceModel.removeTag(tag);
                 sourceModel.addTag(newTag);
                 tag = newTag;
                 sourceModel.sortTags();
                 sourceModel.saveTags();
-                tvC.refresh();
+
                 sourceModel.removeArchTagWithId(tag.getId());
                 sourceModel.addArchTag(newTag);
                 sourceModel.getRwa().writeTagsToArchive(sourceModel.getTagArchList());
+
+                tvC.refresh();
             } else {
                 Tag newTag = new Tag(sourceModel.getHighestTagId(), etController.getTag().getColor(), etController.getTag().getName());
                 tagbtn.setText(newTag.getName());

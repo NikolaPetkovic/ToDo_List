@@ -244,7 +244,7 @@ public class CreateReTaskController extends Stage implements Initializable{
     }
     private String validateName(){
         String name;
-        if(nameTextField.getText().length() >=4 && nameTextField.getText().length() < 24){
+        if(nameTextField.getText().length() >=4 && nameTextField.getText().length() < 40){
             name = nameTextField.getText();
             name.replace(";","");
             return name;

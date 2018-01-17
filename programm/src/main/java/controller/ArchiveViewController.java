@@ -33,33 +33,11 @@ public class ArchiveViewController extends Stage implements Initializable{
     private Boolean back;
 
     public void refresh(ActionEvent event) throws IOException{
-        sourceModel.sortTasks();
+        sourceModel.sortArchTasks();
         setTasks();
         setTags();
     }
 
-    public void sort (ActionEvent event) throws IOException{
-        Stage stage = (Stage)((Button)event.getSource()).getScene().getWindow();
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sortView.fxml"));
-        Pane pane = loader.load();
-        SortController sortController = loader.getController();
-        sortController.setScene(new Scene(pane, pane.getPrefWidth(), pane.getPrefHeight()));
-        sortController.setX(stage.getX()+50);
-        sortController.setY(stage.getY()+50);
-        sortController.setResizable(false);
-        sortController.setModel(sourceModel);
-        sortController.setContent();
-        sortController.initOwner(stage);
-        sortController.initModality(Modality.APPLICATION_MODAL);
-        sortController.showAndWait();
-
-        stage.show();
-
-        if (sortController.isOkClicked()) {
-            refresh(new ActionEvent());
-        }
-    }
     public void openPrintTaskUI(ActionEvent event) throws IOException {
         Stage stage = (Stage)((Button)event.getSource()).getScene().getWindow();
 

@@ -27,7 +27,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ScrollPane fx:id="tagScrollPane" maxHeight="75.0" maxWidth="743.0" minHeight="75.0" minWidth="680.0" prefHeight="75.0" prefWidth="743.0" style="-fx-background-color: #282727; -fx-background: #282727;" vbarPolicy="NEVER" GridPane.rowIndex="1">
+            <ScrollPane fx:id="tagScrollPane" maxHeight="75.0" maxWidth="743.0" minHeight="75.0" minWidth="680.0" prefHeight="75.0" prefWidth="743.0" style="-fx-background-color: #282727; -fx-background: #282727;" stylesheets="@../css/DarkTheme.css" vbarPolicy="NEVER" GridPane.rowIndex="1">
                <padding>
                   <Insets left="15.0" right="5.0" top="5.0" />
                </padding>
@@ -54,14 +54,6 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="sortBtn" alignment="CENTER" mnemonicParsing="false" onAction="#sort" prefHeight="32.0" prefWidth="28.0" style="-fx-background-color: #F0EB26; -fx-border-color: black; -fx-border-radius: 100000; -fx-border-width: 2; -fx-background-radius: 100000;" text="S" textAlignment="CENTER">
-               <font>
-                  <Font name="Calibri Bold" size="21.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="15.0" />
-               </VBox.margin>
-            </Button>
          </children>
          <padding>
             <Insets top="15.0" />
@@ -77,14 +69,6 @@
                      </font>
                      <HBox.margin>
                         <Insets left="7.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#sort" prefHeight="25.0" styleClass="menuBtn" text="Sort" textAlignment="CENTER">
-                     <font>
-                        <Font name="Calibri" size="13.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
                   <Button alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openPrintTaskUI" prefHeight="25.0" styleClass="menuBtn" text="Print Task" textAlignment="CENTER">

@@ -1,5 +1,6 @@
 package controller;
 
+import classes.Date;
 import classes.Tag;
 import classes.Task;
 import javafx.collections.FXCollections;
@@ -12,6 +13,7 @@ import model.SourceModel;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -80,61 +82,19 @@ public class EditTaskController extends Stage implements Initializable {
         String priority = priorityComboBox.getSelectionModel().getSelectedItem().toString();
         int prio = Integer.parseInt(priority.substring(0,1));
 
-        ArrayList<Integer> tagIdList = new ArrayList<>();
+       // ArrayList<Integer> tagIdList = new ArrayList<>();
         ArrayList<Tag> tagList = sourceModel.getTagList();
+        ArrayList<Integer> tagIdList = validateTags();
 
-        String tag1 = tagsComboBox1.getSelectionModel().getSelectedItem().toString();
-        if(!tag1.equals("-")){
-            for (Tag tag : tagList ) {
-                if(tag1.equals(tag.getName())) {
-                    tagIdList.add(tag.getId());
-                }
-            }
-        } else {
-            tagIdList.add(0);
-        }
-
-        String tag2 = tagsComboBox2.getSelectionModel().getSelectedItem().toString();
-        if(!tag2.equals("-")){
-            for (Tag tag : tagList ) {
-                if(tag2.equals(tag.getName())) {
-                    tagIdList.add(tag.getId());
-                }
-            }
-        } else {
-            tagIdList.add(0);
-        }
-
-        String tag3 = tagsComboBox3.getSelectionModel().getSelectedItem().toString();
-        if(!tag3.equals("-")){
-            for (Tag tag : tagList ) {
-                if(tag3.equals(tag.getName())) {
-                    tagIdList.add(tag.getId());
-                }
-            }
-        } else {
-            tagIdList.add(0);
-        }
-
-        String tag4 = tagsComboBox4.getSelectionModel().getSelectedItem().toString();
-        if(!tag4.equals("-")){
-            for (Tag tag : tagList ) {
-                if(tag4.equals(tag.getName())) {
-                    tagIdList.add(tag.getId());
-                }
-            }
-        } else {
-            tagIdList.add(0);
-        }
-
-        java.sql.Date convertedDeadline = java.sql.Date.valueOf(deadlineDatePicker.getValue());
+        /*java.sql.Date convertedDeadline = java.sql.Date.valueOf(deadlineDatePicker.getValue());
         LocalDate convertedDeadline2 = convertedDeadline.toLocalDate();
         classes.Date deadline = new classes.Date(Integer.parseInt(deadlineMinute.getText()),Integer.parseInt(deadlineHour.getText()), convertedDeadline2.getDayOfMonth(), convertedDeadline2.getMonthValue(),convertedDeadline2.getYear(),false );
-
+            */
         if (!nameTextField.getText().equals(task.getName())){
-            task.setName(nameTextField.getText());
+            String name = validateName();
+            task.setName(name);
         }
-
+        classes.Date deadline = validateDeadline();
         if (!deadline.equals(task.getDeadline())){
             task.setDeadline(deadline);
         }
@@ -236,5 +196,93 @@ public class EditTaskController extends Stage implements Initializable {
             if(!old.contains(tag)) return false;
         }
         return true;
+    }
+
+    public String validateName(){
+        String name;
+        if(nameTextField.getText().length() >=4 && nameTextField.getText().length() < 40){
+            name = nameTextField.getText();
+            name.replace(";","");
+            nameTextField.setStyle("-fx-border-color:green; -fx-border-width:2; -fx-border-radius:2;");
+            return name;
+        }else{
+            nameTextField.setStyle("-fx-border-color:red; -fx-border-width:2; -fx-border-radius:2;");
+            return null;
+        }
+
+    }
+
+    private Date validateDeadline() {
+
+
+        if(deadlineHour.getText() != null && deadlineMinute != null && !deadlineDatePicker.getValue().equals(null)) {
+            LocalDate deadlineDate = deadlineDatePicker.getValue();
+
+            LocalTime deadlineTime = LocalTime.of(Integer.parseInt(deadlineHour.getText()), Integer.parseInt(deadlineMinute.getText()));
+            LocalDateTime deadlineDateTime = LocalDateTime.of(deadlineDate, deadlineTime);
+
+            if (!deadlineDateTime.isBefore(LocalDateTime.now())) {
+
+                LocalDate convertedDeadline2 = deadlineDate;
+                classes.Date deadline = new classes.Date(Integer.parseInt(deadlineMinute.getText()), Integer.parseInt(deadlineHour.getText()), convertedDeadline2.getDayOfMonth(), convertedDeadline2.getMonthValue(), convertedDeadline2.getYear(), false);
+
+                return deadline;
+            }else{
+
+            }
+
+        }
+
+        return null;
+    }
+
+    public ArrayList<Integer> validateTags (){
+        ArrayList<Integer> tagIdList = new ArrayList<>();
+        ArrayList<Tag> tagList = sourceModel.getTagList();
+
+        String tag1 = tagsComboBox1.getSelectionModel().getSelectedItem().toString();
+        if(!tag1.equals("-")){
+            for (Tag tag : tagList ) {
+                if(tag1.equals(tag.getName())) {
+                    tagIdList.add(tag.getId());
+                }
+            }
+        } else {
+            tagIdList.add(0);
+        }
+
+        String tag2 = tagsComboBox2.getSelectionModel().getSelectedItem().toString();
+        if(!tag2.equals("-")){
+            for (Tag tag : tagList ) {
+                if(tag2.equals(tag.getName())) {
+                    tagIdList.add(tag.getId());
+                }
+            }
+        } else {
+            tagIdList.add(0);
+        }
+
+        String tag3 = tagsComboBox3.getSelectionModel().getSelectedItem().toString();
+        if(!tag3.equals("-")){
+            for (Tag tag : tagList ) {
+                if(tag3.equals(tag.getName())) {
+                    tagIdList.add(tag.getId());
+                }
+            }
+        } else {
+            tagIdList.add(0);
+        }
+
+        String tag4 = tagsComboBox4.getSelectionModel().getSelectedItem().toString();
+        if(!tag4.equals("-")){
+            for (Tag tag : tagList ) {
+                if(tag4.equals(tag.getName())) {
+                    tagIdList.add(tag.getId());
+                }
+            }
+        } else {
+            tagIdList.add(0);
+        }
+        return tagIdList;
     }
 }

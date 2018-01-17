@@ -29,46 +29,44 @@ public class Main extends Application implements Initializable {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainView.fxml"));
-        primaryStage.setTitle("Willkomen");
-        primaryStage.setScene(new Scene(root, 400, 300));
-        //primaryStage.setResizable(false);
-        System.out.println(rwa.getFileNameFromFile("Source"));
+
+        primaryStage.setTitle("Menu");
         primaryStage.getIcons().add(new Image("/txt/ProgramIcon.png"));
+        primaryStage.setScene(new Scene(root, 400, 300));
+
         primaryStage.setMinWidth(416);
         primaryStage.setMinHeight(338);
-        primaryStage.setMaxWidth(1600);
-        primaryStage.setMaxHeight(1200);
+        primaryStage.setMaxWidth(1616);
+        primaryStage.setMaxHeight(1238);
+        //primaryStage.setResizable(false);
+
         primaryStage.show();
     }
 
     public void getSource(ActionEvent event) {
         try {
             Stage primaryStage = (Stage)((Button)event.getSource()).getScene().getWindow();
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sourceView.fxml"));
             Pane pane = loader.load();
-
             SourceViewController sourceController = loader.getController();
-            sourceController.setScene(new Scene(pane, 500, 325));
+
+            sourceController.setTitle("Select File");
+            sourceController.getIcons().add(new Image("/txt/ProgramIcon.png"));
+            sourceController.setScene(new Scene(pane, 500, 310));
+
             sourceController.setX(primaryStage.getX()-100);
             sourceController.setY(primaryStage.getY()-50);
             sourceController.setMinWidth(516);
-            sourceController.setMinHeight(363);
-            sourceController.setMaxWidth(2000);
-            sourceController.setMaxHeight(1300);
-            //sourceController.setResizable(false);
-            //sourceController.sizeToScene();
+            sourceController.setMinHeight(348);
+            sourceController.setMaxWidth(1516);
+            sourceController.setMaxHeight(968);
+
             sourceController.setModel(sourceModel);
             sourceController.initOwner(primaryStage);
             sourceController.initModality(Modality.APPLICATION_MODAL);
 
             primaryStage.hide();
-
-            sourceController.getIcons().add(new Image("/txt/ProgramIcon.png"));
             sourceController.showAndWait();
-
-            System.out.println(sourceController.getHeight());
-            System.out.println(sourceController.getWidth());
 
             if (sourceController.getBack()){
                 primaryStage.show();
@@ -93,25 +91,28 @@ public class Main extends Application implements Initializable {
             sourceModel.setReTaskList(sourceModel.getRwa().readReTasksFromFile());
 
             Stage primaryStage = (Stage)((Button)event.getSource()).getScene().getWindow();
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/taskView.fxml"));
             Pane pane = loader.load();
-
             TaskViewController taskViewController = loader.getController();
-            taskViewController.setScene(new Scene(pane, pane.getPrefWidth(), pane.getPrefHeight()));
+
+            taskViewController.setTitle("ToDo-List");
+            taskViewController.getIcons().add(new Image("/txt/ProgramIcon.png"));
+            taskViewController.setScene(new Scene(pane, 750, 665));
+
             taskViewController.setX(primaryStage.getX()-150);
             taskViewController.setY(primaryStage.getY()-100);
-            taskViewController.setResizable(false);
-            taskViewController.sizeToScene();
+            taskViewController.setMinWidth(766);
+            taskViewController.setMinHeight(703);
+            taskViewController.setMaxWidth(1516);
+            taskViewController.setMaxHeight(1348);
+            //taskViewController.setResizable(false);
+
+            taskViewController.setModel(sourceModel);
             taskViewController.initOwner(primaryStage);
             taskViewController.initModality(Modality.APPLICATION_MODAL);
-            taskViewController.setModel(sourceModel);
             taskViewController.refresh();
 
             primaryStage.hide();
-
-            taskViewController.getIcons().add(new Image("/txt/ProgramIcon.png"));
-            taskViewController.setTitle("ToDo-List");
             taskViewController.showAndWait();
 
             if (taskViewController.getBack()){
@@ -176,7 +177,6 @@ public class Main extends Application implements Initializable {
             ArrayList<Tag> tagArchList = new ArrayList<>();
             ArrayList<Task> taskArchList = new ArrayList<>();
 
-
             if (rwa.getFileNameFromFile("Source").equals("yes")){
                 String sourceUrl ="/txt/source.txt";
                 URL url = getClass().getResource("/txt/source.txt");
@@ -188,14 +188,11 @@ public class Main extends Application implements Initializable {
                 String line;
                 while ((line = br.readLine()) != null) {
                     repo.add(line);
-                    System.out.println(line);
                 }
                 br.close();
 
                 File dir = new File(rwa.getFileNameFromFile("Dir1"));
                 if (!dir.exists()){
-                    System.out.println("dir1");
-
                     try {
                         file = new File(url.toURI().getPath());
                         PrintWriter pw = new PrintWriter(new FileOutputStream(file, false));
@@ -221,14 +218,11 @@ public class Main extends Application implements Initializable {
                 br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(sourceUrl)));
                 while ((line = br.readLine()) != null) {
                     repo.add(line);
-                    System.out.println(line);
                 }
                 br.close();
 
                 dir = new File(rwa.getFileNameFromFile("Dir2"));
                 if (!dir.exists()){
-                    System.out.println("dir2");
-
                     try {
                         file = new File(url.toURI().getPath());
                         PrintWriter pw = new PrintWriter(new FileOutputStream(file, false));
