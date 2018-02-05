@@ -135,27 +135,28 @@ public class Main extends Application implements Initializable {
             sourceModel.setTaskArchList(sourceModel.getRwa().readTasksFromArchive());
 
             Stage primaryStage = (Stage)((Button)event.getSource()).getScene().getWindow();
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/archiveView.fxml"));
             Pane pane = loader.load();
-
             ArchiveViewController archiveViewController = loader.getController();
-            archiveViewController.setScene(new Scene(pane, pane.getPrefWidth(), pane.getPrefHeight()));
+
+            archiveViewController.setTitle("Archive");
+            archiveViewController.getIcons().add(new Image("/txt/ProgramIcon.png"));
+            archiveViewController.setScene(new Scene(pane, 750,665));
+
             archiveViewController.setX(primaryStage.getX()-150);
             archiveViewController.setY(primaryStage.getY()-100);
-            archiveViewController.setMaxHeight(550);
-            archiveViewController.setMaxWidth(740);
+            archiveViewController.setMinWidth(766);
+            archiveViewController.setMinHeight(703);
+            archiveViewController.setMaxWidth(1516);
+            archiveViewController.setMaxHeight(1348);
+            //archiveViewController.setResizable(false);
 
-            archiveViewController.setResizable(false);
             archiveViewController.setModel(sourceModel);
             archiveViewController.initOwner(primaryStage);
             archiveViewController.initModality(Modality.APPLICATION_MODAL);
             archiveViewController.refresh(new ActionEvent());
 
             primaryStage.hide();
-
-            archiveViewController.getIcons().add(new Image("/txt/ProgramIcon.png"));
-            archiveViewController.setTitle("Archive");
             archiveViewController.showAndWait();
 
             if (archiveViewController.getBack()){

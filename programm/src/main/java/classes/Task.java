@@ -25,6 +25,16 @@ public class Task {
         return name;
     }
 
+    public String getShortName(){
+        String shortName;
+        if(name.length()>14){
+            shortName = name.substring(0,13)+"..";
+        }else{
+            shortName = name;
+        }
+        return shortName;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

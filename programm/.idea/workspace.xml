@@ -63,21 +63,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="81" lean-forward="false" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+            <state relative-caret-position="1819">
+              <caret line="120" column="40" lean-forward="false" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Date.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/classes/Date.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="138" column="38" lean-forward="false" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -86,11 +86,9 @@
       <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classes/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <element signature="e#1025#1026#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="510">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,46 +96,11 @@
       <file leaf-file-name="PrintController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/PrintController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="1020">
+              <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
               <folding>
-                <element signature="method#initialize#0;class#PrintController#0" expanded="false" />
-                <element signature="method#setModel#0;class#PrintController#0" expanded="false" />
-                <element signature="method#sortOutTasks#0;class#PrintController#0" expanded="false" />
-                <element signature="method#reTaskToTask#0;class#PrintController#0" expanded="false" />
-                <element signature="method#setContent#0;class#PrintController#0" expanded="false" />
                 <element signature="method#validateTag#0;class#PrintController#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXMLLoader.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28050">
-              <caret line="1770" column="0" lean-forward="false" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditTaskController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/EditTaskController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateTaskController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/CreateTaskController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3519">
-              <caret line="233" column="24" lean-forward="false" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -172,8 +135,10 @@
       <find>.</find>
       <find>,</find>
       <find>arch</find>
-      <find>Font</find>
-      <find>validateName</find>
+      <find>pageBreak</find>
+      <find>taskView</find>
+      <find>style</find>
+      <find>Style</find>
     </findStrings>
     <replaceStrings>
       <replace>/txt/ProgramIcon.png</replace>
@@ -192,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/introductionView2.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SortController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/archTag.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/showTask.fxml" />
@@ -209,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/EditTaskController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Printer.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/TaskController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/PrintController.java" />
         <option value="$PROJECT_DIR$/src/main/java/classes/Date.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/archTask.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/introductionView.fxml" />
@@ -239,9 +202,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/fxml/sourceView.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ReTaskController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ArchiveViewController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/archiveView.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/model/SourceModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/PrintController.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ArchiveViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/classes/Printer.java" />
       </list>
     </option>
@@ -253,10 +218,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="683" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-6" />
+    <option name="y" value="104" />
+    <option name="width" value="1366" />
     <option name="height" value="738" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -300,10 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -366,20 +327,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="programm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="programm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="txt" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -725,13 +682,15 @@
       <workItem from="1507880017244" duration="7995000" />
       <workItem from="1508143811881" duration="2103000" />
       <workItem from="1508231770238" duration="1174000" />
-      <workItem from="1516095307684" duration="14673000" />
-      <workItem from="1516180101815" duration="4526000" />
+      <workItem from="1517405675993" duration="7229000" />
+      <workItem from="1517820985728" duration="5851000" />
+      <workItem from="1517841437555" duration="2044000" />
+      <workItem from="1517843799487" duration="460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46107000" />
+    <option name="totallyTimeSpent" value="42521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -743,7 +702,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261944" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -754,11 +713,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26645264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14174455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21962617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32580644" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21010248" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23206443" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -847,38 +806,8 @@
           <properties />
           <option name="timeStamp" value="745" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classes/Printer.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="774" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classes/Printer.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="775" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classes/Printer.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="778" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classes/Printer.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="779" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classes/Printer.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="780" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="781" />
+      <option name="time" value="785" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -892,22 +821,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/txt/To-do_List.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ShowTaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/showTask.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="75" column="36" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="36" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/txt/ProgramIcon.png">
@@ -919,23 +840,23 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/jre/lib/rt.jar!/java/awt/print/Printable.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/stage/Stage.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/archTask.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="56" lean-forward="true" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/editTask.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/editTask.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="41" column="58" lean-forward="false" selection-start-line="41" selection-start-column="58" selection-end-line="42" selection-end-column="30" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/programm/txt/source.txt">
@@ -963,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,16 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#197#198#0" expanded="false" />
-            <element signature="e#224#225#0" expanded="false" />
-            <element signature="e#264#265#0" expanded="false" />
-            <element signature="e#296#297#0" expanded="false" />
-            <element signature="e#347#348#0" expanded="false" />
-            <element signature="e#383#384#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#502#503#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,14 +914,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/mainView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CreateTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-544">
+          <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1031,35 +937,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/task.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TaskViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="222" column="0" lean-forward="true" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="method#openReTaskCreationUI#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#openTaskCreationUI#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#openTagCreationUI#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#openPrintTaskUI#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#openPrintReTaskUI#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#sort#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#setTags#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#setReTasks#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#setSortText#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#nextWeek#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#prevWeek#0;class#TaskViewController#0" expanded="false" />
-            <element signature="method#back#0;class#TaskViewController#0" expanded="false" />
-          </folding>
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/CreateReTaskController.java">
@@ -1072,17 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/taskView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/EditReTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
@@ -1091,24 +964,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/reTask.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/reTask.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/ReTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding>
-            <element signature="method#toTask#0;class#ReTask#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,22 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="660" column="46" lean-forward="true" selection-start-line="660" selection-start-column="46" selection-end-line="660" selection-end-column="46" />
-          <folding>
-            <element signature="method#createNewFileIfNotExists#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#setSortTyp#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#readTasksFromFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#readTagsFromFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#readReTasksFromFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#getDatesFromFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#writeTasksToFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#writeReTaskDatesToFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#writeReTasksToFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#writeTagsToFile#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#readTasksFromArchive#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#readTagsFromArchive#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#writeTasksToArchive#0;class#ReaderWriterArchivist#0" expanded="false" />
-            <element signature="method#writeTagsToArchive#0;class#ReaderWriterArchivist#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1174,147 +1034,178 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/sourceView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/SourceModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="728" column="32" lean-forward="false" selection-start-line="728" selection-start-column="32" selection-end-line="728" selection-end-column="32" />
+        <state relative-caret-position="1275">
+          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding>
             <element signature="method#SourceModel#0;class#SourceModel#0" expanded="false" />
-            <element signature="method#getHighestTagId#0;class#SourceModel#0" expanded="false" />
             <element signature="method#removeArchTagWithId#0;class#SourceModel#0" expanded="false" />
             <element signature="method#getSelect1#0;class#SourceModel#0" expanded="false" />
             <element signature="method#getSelect2#0;class#SourceModel#0" expanded="false" />
             <element signature="method#saveTasks#0;class#SourceModel#0" expanded="false" />
             <element signature="method#saveReTasks#0;class#SourceModel#0" expanded="false" />
-            <element signature="method#archTask#0;class#SourceModel#0" expanded="false" />
-            <element signature="method#archTag#0;class#SourceModel#0" expanded="false" />
-            <element signature="method#archContainsTask#0;class#SourceModel#0" expanded="false" />
-            <element signature="method#archContainsTag#0;class#SourceModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/sourceView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-          <folding>
-            <marker date="1516028580888" expanded="true" signature="4723:5761" ph="..." />
-            <marker date="1516028580888" expanded="true" signature="4925:5034" ph="..." />
-            <marker date="1516028580888" expanded="true" signature="4943:5018" ph="..." />
-            <marker date="1516028580888" expanded="true" signature="5291:5401" ph="..." />
-            <marker date="1516028580888" expanded="true" signature="5309:5384" ph="..." />
-            <marker date="1516028580888" expanded="true" signature="5644:5746" ph="..." />
-            <marker date="1516028580888" expanded="true" signature="5662:5730" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ReTaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="158" column="1" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/archiveView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="126" lean-forward="false" selection-start-line="8" selection-start-column="126" selection-end-line="8" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ArchiveViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="57" column="57" lean-forward="false" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-          <folding>
-            <marker date="1516028580838" expanded="true" signature="4424:4902" ph="{...}" />
-            <marker date="1516028580838" expanded="true" signature="4972:6979" ph="{...}" />
-            <marker date="1516028580838" expanded="false" signature="7023:7034" ph=" { " />
-            <marker date="1516028580838" expanded="false" signature="7047:7053" ph=" }" />
-            <marker date="1516028580838" expanded="true" signature="7136:10699" ph="{...}" />
+            <element signature="method#saveTags#0;class#SourceModel#0" expanded="false" />
+            <element signature="method#sortTags#0;class#SourceModel#0" expanded="false" />
+            <element signature="method#sortTasks#0;class#SourceModel#0" expanded="false" />
+            <element signature="method#sortIdTasks#0;class#SourceModel#0" expanded="false" />
+            <element signature="method#sortIdReTasks#0;class#SourceModel#0" expanded="false" />
+            <element signature="method#sortArchTasks#0;class#SourceModel#0" expanded="false" />
+            <marker date="1517404765799" expanded="false" signature="26901:27967" ph="{...}" />
+            <marker date="1517404765799" expanded="false" signature="28000:28148" ph="{...}" />
+            <marker date="1517404765799" expanded="false" signature="28196:28475" ph="{...}" />
+            <marker date="1517404765799" expanded="false" signature="28520:28872" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/EditTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="151">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CreateTaskController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ReTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3519">
-          <caret line="233" column="24" lean-forward="false" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="1146">
+          <caret line="149" column="26" lean-forward="false" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
           <folding>
-            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="method#initialize#0;class#ReTaskController#0" expanded="false" />
+            <element signature="method#showTags#0;class#ReTaskController#0" expanded="false" />
+            <element signature="method#setReTask#0;class#ReTaskController#0" expanded="false" />
+            <element signature="method#donePressed#0;class#ReTaskController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Date.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/archiveView.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="8" column="126" lean-forward="false" selection-start-line="8" selection-start-column="126" selection-end-line="8" selection-end-column="126" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/mainView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28050">
-          <caret line="1770" column="0" lean-forward="false" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="1773" column="0" lean-forward="false" selection-start-line="1773" selection-start-column="0" selection-end-line="1773" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/stage/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/PrintController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="1020">
+          <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
           <folding>
-            <element signature="method#initialize#0;class#PrintController#0" expanded="false" />
-            <element signature="method#setModel#0;class#PrintController#0" expanded="false" />
-            <element signature="method#sortOutTasks#0;class#PrintController#0" expanded="false" />
-            <element signature="method#reTaskToTask#0;class#PrintController#0" expanded="false" />
-            <element signature="method#setContent#0;class#PrintController#0" expanded="false" />
             <element signature="method#validateTag#0;class#PrintController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ArchiveViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="90" column="54" lean-forward="false" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+          <folding>
+            <element signature="method#refresh#0;class#ArchiveViewController#0" expanded="false" />
+            <element signature="method#openPrintTaskUI#0;class#ArchiveViewController#0" expanded="false" />
+            <element signature="method#back#0;class#ArchiveViewController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="81" lean-forward="false" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+        <state relative-caret-position="1819">
+          <caret line="120" column="40" lean-forward="false" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/taskView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TaskViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+          <folding>
+            <element signature="method#openReTaskCreationUI#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#openTaskCreationUI#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#openTagCreationUI#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#openPrintReTaskUI#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#refresh#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#setTasks#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#setTags#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#setReTasks#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#setSortText#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#nextWeek#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#prevWeek#0;class#TaskViewController#0" expanded="false" />
+            <element signature="method#back#0;class#TaskViewController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="138" column="38" lean-forward="false" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
           <folding />
         </state>
       </provider>

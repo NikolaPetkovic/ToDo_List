@@ -68,6 +68,10 @@ public class ArchiveViewController extends Stage implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         back = false;
+
+        taskScrollPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            setTasks();
+        });
     }
 
     public void setModel(SourceModel sourceModel) {
@@ -75,6 +79,10 @@ public class ArchiveViewController extends Stage implements Initializable{
     }
 
     private void setTasks(){
+        double width = taskScrollPane.getWidth();
+        width = width - 20;
+        int max = (int) (width/110);
+
         GridPane paneForScrollPane = new GridPane();
 
         int y = 0;
@@ -88,12 +96,13 @@ public class ArchiveViewController extends Stage implements Initializable{
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
             ArchTaskController archTaskController = loader.getController();
             archTaskController.setTask(task);
             archTaskController.setModel(sourceModel);
             archTaskController.showTags();
 
-            if (x == 6){
+            if (x == max){
                 y++;
                 x = 0;
             }

@@ -32,6 +32,8 @@ public class PrintController extends Stage implements Initializable {
     private DatePicker fromDatePicker;
     @FXML
     private ComboBox tagComboBox;
+    private  LocalDate fromDate = null;
+    private  LocalDate toDate = null;
 
 
     @Override
@@ -41,6 +43,7 @@ public class PrintController extends Stage implements Initializable {
 
     public void print(){
             Printer p = new Printer();
+            p.setPrintController(this);
         if(printReTask){
             p.printData(sortOutTasks(reTaskToTask(sourceModel.getReTaskList()),sourceModel.getTagList()),sourceModel.getTagList());
         }else if(printArchive) {
@@ -58,8 +61,7 @@ public class PrintController extends Stage implements Initializable {
 
     }
     private ArrayList<Task> sortOutTasks(ArrayList<Task> arrayList, ArrayList<Tag> tagList){
-        LocalDate fromDate = null;
-        LocalDate toDate = null;
+
         ArrayList<Task> list = new ArrayList<>();
         if(!fromDatePicker.getValue().equals(null)) {
             fromDate = fromDatePicker.getValue();
@@ -145,6 +147,15 @@ public class PrintController extends Stage implements Initializable {
             }
         }
         return null;
+    }
+
+    public String getFromDate(){
+        String s = fromDate.getDayOfMonth()+"."+fromDate.getMonthValue()+"."+fromDate.getYear();
+        return s;
+    }
+    public String getToDate(){
+        String s = toDate.getDayOfMonth()+"."+toDate.getMonthValue()+"."+toDate.getYear();
+        return s;
     }
 
 

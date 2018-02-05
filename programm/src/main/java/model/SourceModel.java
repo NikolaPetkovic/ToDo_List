@@ -364,7 +364,6 @@ public class SourceModel {
         }
     }
 
-
     private boolean dateBefore (Task one, Task two){
         Date deadline1 = one.getDeadline();
         Date deadline2 = two.getDeadline();
@@ -670,7 +669,8 @@ public class SourceModel {
     }
 
     public void archReTask(ReTask reTask, Date date){
-        Task task = new Task(reTask.getName(), date, null, reTask.getCreationDate(), 0, false, reTask.getTagList());
+        String name = reTask.getName() + " " + date.getFormatedDay() + "." + date.getFormatedMonth();
+        Task task = new Task(name, date, null, reTask.getCreationDate(), 0, false, reTask.getTagList());
         if (!archContainsTask(task)){
             Task archTask = task;
             archTask.setCompletionDate(new Date(LocalTime.now().getMinute(), LocalTime.now().getHour(), LocalDate.now().getDayOfMonth(), LocalDate.now().getMonthValue(), LocalDate.now().getYear(), false));
